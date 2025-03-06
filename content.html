@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Content - My Personal Portfolio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <!-- Template Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    
+        <!-- Template CSS Files -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    
+        <style>
+            /* Custom styles for the content page */
+            .main-content {
+                padding: 2rem 0;
+            }
+    
+            .insight-image {
+                transition: transform 0.3s, box-shadow 0.3s;
+                border-radius: 10px;
+                width: 100%; /* Ensures equal size */
+                height: 100%; /* Fixed height for uniformity */
+            }
+    
+            .insight-image:hover {
+                transform: scale(1.05);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            }
+    
+            h2 {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                color: #4756df; /* Dark blue for headings */
+            }
+    
+            /* Gallery styles */
+            .gallery {
+                margin: 5px;
+                padding: 10px;
+                float: left;
+                width: calc(50% - 10px); /* 2 images per row with margin */
+                position: relative;
+            }
+    
+            .gallery:hover {
+                border: 1px solid #777;
+            }
+    
+            .gallery img {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+            }
+    
+            .desc {
+                padding: 15px;
+                text-align: center;
+                display: none; /* Initially hidden */
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                width: 100%;
+            }
+    
+            .gallery:hover .desc {
+                display: block; /* Show description on hover */
+            }
+    
+            .paid-promotion {
+                text-align: center;
+                margin-top: 2rem;
+            }
+        </style>
+    
+        <!-- Modernizr JS File -->
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    
+    <body class="content">
+    
+    <!-- Header Starts -->
+    <header class="header" id="navbar-collapse-toggle">
+        <!-- Fixed Navigation Starts -->
+        <ul class="icon-menu d-none d-lg-block">
+            <li class="icon-box">
+                <i class="fa fa-home"></i>
+                <a href="index.html">
+                    <h2>Home</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-user"></i>
+                <a href="about.html">
+                    <h2>About</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-briefcase"></i>
+                <a href="portfolio.html">
+                    <h2>Portfolio</h2>
+                </a>
+            </li>
+            <li class="icon-box">
+                <i class="fa fa-envelope-open"></i>
+                <a href="contact.html">
+                    <h2>Contact</h2>
+                </a>
+            </li>
+            <li class="icon-box active">
+                <i class="fa fa-comments"></i>
+                <a href="content.html">
+                    <h2>Content</h2>
+                </a>
+            </li>
+        </ul>
+        <!-- Fixed Navigation Ends -->
+        <!-- Mobile Menu Starts -->
+        <nav role="navigation" class="d-block d-lg-none">
+            <div id="menuToggle">
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="list-unstyled" id="menu">
+                    <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+                    <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li ```html
+                    <li><a href="portfolio.html"><i class="fa fa-folder-open"></i><span>Portfolio</span></a></li>
+                    <li class="active"><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                    <li><a href="content.html"><i class="fa fa-comments"></i><span>Content</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Mobile Menu Ends -->
+    </header>
+    <!-- Header Ends -->
+    
+    <!-- Page Title Starts -->
+    <section class="title-section text-left text-sm-center">
+        <h1><span>Content</span></h1>
+        <span class="title-bg">Insights</span>
+    </section>
+    <!-- Page Title Ends -->
+    
+    <!-- Main Content Starts -->
+    <section class="main-content">
+        <div class="container">
+            <!-- Insights Section Starts -->
+            <h1 style="text-align: center;">Insights</h1>
+            <div class="row">
+                <!-- Insight Images -->
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/C_7MtOzJi6A/?igsh=bGs1eXRzNmNzMmhy" target="_blank">
+                        <img src="img/insight1.jpg" class="img-fluid insight-image" alt="Insight 1">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/C_AHG78J82X/?igsh=MWhtYjN1ZnBmeDRxNg==" target="_blank">
+                        <img src="img/insight2.jpg" class="img-fluid insight-image" alt="Insight 2">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/DAc3hrMMgvC/?igsh=ZTA2YzFzMTZiaG9l" target="_blank">
+                        <img src="img/insight3.jpg" class="img-fluid insight-image" alt="Insight 3">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/C-epcSlJlbS/?igsh=cXh2NG5kejNzbG9o" target="_blank">
+                        <img src="img/insight4.jpg" class="img-fluid insight-image" alt="Insight 4">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/C73PPEfMZp5/?igsh=MWM1eHJqcW9wdmxzOA==" target="_blank">
+                        <img src="img/insight5.jpg" class="img-fluid insight-image" alt="Insight 5">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/DCLYAL0SJpv/?igsh=bTl6M21yamx4MWtn" target="_blank">
+                        <img src="img/insight6.jpg" class="img-fluid insight-image" alt="Insight 6">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/DBX5neDqAGu/?igsh=MXhwdG44b2E0c3didg==" target="_blank">
+                        <img src="img/insight7.jpg" class="img-fluid insight-image" alt="Insight 7">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href="https://www.instagram.com/reel/DBBA6tsJIR1/?igsh=MW9lNzdrcGtwM2c1OA==" target="_blank">
+                        <img src="img/insight8.jpg" class="img-fluid insight-image" alt="Insight 8">
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-30">
+                    <a href=https://www.instagram.com/reel/DBgjY0Jq1ST/?igsh=MXRlZW10ODh2Zms5Zg==" target="_blank">
+                        <img src="img/insight9.jpg" class="img-fluid insight-image" alt="Insight 9">
+                    </a>
+                </div>
+            </div>
+            <!-- Insights Section Ends -->
+    
+            <!-- Paid Collaborations Section Starts -->
+            <br><h1 style="text-align: center;">Paid Collaborations</h1>
+            <div class="row paid-promotion">
+                <div class="gallery">
+                    <a target="_blank" href="https://www.instagram.com/reel/C_bA2KQhEwu/?igsh=bWM5ZWQxMnVlcGJy">
+                        <img src="img/brand1.jpg" alt="Brand 1">
+                    </a>
+                    <div class="desc">FLAMES</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="https://www.instagram.com/reel/C_pNOAKJsBw/?igsh=N2VicHg3Yjd1c2dn">
+                        <img src="img/brand2.jpg" alt="Brand 2">
+                    </a>
+                    <div class ="desc">TECHSKININDIA</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="https://www.instagram.com/reel/C_kC3VKh4q3/?igsh=N2h4ZTdqNGxsbDNm">
+                        <img src="img/brand3.jpg" alt="Brand 3">
+                    </a>
+                    <div class="desc">HOUME</div>
+                </div>
+                <div class="gallery">
+                    <a target="_blank" href="https://www.instagram.com/reel/C-Zyfr-S5EG/?igsh=d3ZrN2liaG9wdGhu">
+                        <img src="img/brand4.jpg" alt="Brand 4">
+                    </a>
+                    <div class="desc">TERRACACIA</div>
+                </div>
+            </div>
+            <!-- Paid Collaborations Section Ends -->
+        </div>
+    </section>
+    <!-- Main Content Ends -->
+    
+    <!-- Template JS Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    </body>
+    
+    </html>
