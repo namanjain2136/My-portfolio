@@ -12,7 +12,6 @@
 
     <!-- Template CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/preloader.min.css" rel="stylesheet">
     <link href="css/circle.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
@@ -36,11 +35,30 @@
 
     <!-- Modernizr JS File -->
     <script src="js/modernizr.custom.js"></script>
+    <style>@keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(60px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(.4,2,.6,1);
+        animation-fill-mode: both;
+      }
+      </style>
 </head>
 
 <body class="home">
 <!-- Live Style Switcher Starts - demo only -->
-
+<section class="main-content fade-in-up">
+    <!-- ...your content here... -->
+  </section>
+  
 </div>
 <div id="showSwitcher" class="styleSecondColor"><i class="fa fa-cog fa-spin"></i></div>
 <!-- Live Style Switcher Ends - demo only -->
@@ -107,8 +125,8 @@
         <div class="col-12 col-lg-8 offset-lg-4 home-details text-left text-sm-center text-lg-left">
             <div>
                 <img src="img/2.jpg" class="img-fluid main-img-mobile d-none d-sm-block d-lg-none" alt="my picture">
-                <h1 class="text-uppercase poppins-font">I'm Naman Jain.<span>UG Sophomore :)</span></h1>
-                <p class="open-sans-font">I'm a 2nd year UG student at VIT chennai focusing on tech application and content creation, I am passionate about learning and building excellent software that helps to society.</p>
+                <h1 class="text-uppercase poppins-font">I'm Naman Jain.<span>UG CSE Engineer :)</span></h1>
+                <p class="open-sans-font">I am an undergraduate student at VIT chennai focusing on tech application and content creation, I am passionate about learning and building excellent software that helps to society.</p>
                 <a class="button" href="about.html">
                     <span class="button-text">more about me</span>
                     <span class="button-icon fa fa-arrow-right"></span>

@@ -12,7 +12,6 @@
 
     <!-- Template CSS Files -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/preloader.min.css" rel="stylesheet">
     <link href="css/circle.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/fm.revealator.jquery.min.css" rel="stylesheet">
@@ -39,12 +38,29 @@
 </head>
 
 <body class="contact">
-<!-- Live Style Switcher Starts - demo only -->
 
-</div>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $to = "namanjain2136@gmail.com";
+    $name = htmlspecialchars($_POST["name"]);
+    $email = htmlspecialchars($_POST["email"]);
+    $subject = htmlspecialchars($_POST["subject"]);
+    $message = htmlspecialchars($_POST["message"]);
 
-<!-- Live Style Switcher Ends - demo only -->
-<!-- Header Starts -->
+    $headers = "From: " . $email . "\r\n" .
+               "Reply-To: " . $email . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    $full_message = "Name: $name\nEmail: $email\nMessage:\n$message";
+
+    if (mail($to, $subject, $full_message, $headers)) {
+        $success_message = "Thank you for contacting me! Your message has been sent.";
+    } else {
+        $error_message = "Sorry, there was an error sending your message. Please try again later.";
+    }
+}
+?>
+
 <!-- Header Starts -->
 <header class="header" id="navbar-collapse-toggle">
     <!-- Fixed Navigation Starts -->
@@ -69,7 +85,7 @@
         </li>
         <li class="icon-box">
             <i class="fa fa-envelope-open"></i>
-            <a href="contact.html">
+            <a href="contact.php">
                 <h2>Contact</h2>
             </a>
         </li>
@@ -92,7 +108,7 @@
                 <li class="active"><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
                 <li><a href="about.html"><i class="fa fa-user"></i><span>About</span></a></li>
                 <li><a href="projects.html"><i class="fa fa-folder-open"></i><span>Projects</span></a></li>
-                <li><a href="contact.html"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
+                <li><a href="contact.php"><i class="fa fa-envelope-open"></i><span>Contact</span></a></li>
                 <li><a href="content.html"><i class="fa fa-comments"></i><span>Content</span></a></li>
             </ul>
         </div>
@@ -100,13 +116,14 @@
     <!-- Mobile Menu Ends -->
 </header>
 <!-- Header Ends -->
-<!-- Header Ends -->
+
 <!-- Page Title Starts -->
 <section class="title-section text-left text-sm-center revealator-slideup revealator-once revealator-delay1">
     <h1>get in <span>touch</span></h1>
     <span class="title-bg">contact</span>
 </section>
 <!-- Page Title Ends -->
+
 <!-- Main Content Starts -->
 <section class="main-content revealator-slideup revealator-once revealator-delay1">
     <div class="container">
@@ -117,45 +134,54 @@
                 <p class="open-sans-font mb-3">Feel free to get in touch with me. I am always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
                 <p class="open-sans-font custom-span-contact position-relative">
                     <i class="fa fa-envelope-open position-absolute"></i>
-                    <span class="d-block">mail me</span>namanjain2136@gmail.com.com
+                    <span class="d-block">mail me</span>namanjain2136@gmail.com
                 </p>
                 <p class="open-sans-font custom-span-contact position-relative">
-                    <i class="fa fa-envelope-open position-absolute"></i>
+                    <i class="fa fa-linkedin position-absolute"></i>
                     <span class="d-block">linkedin</span>Naman Jain
                 </p>
-            <p class="open-sans-font custom-span-contact position-relative">
-                <i class="fa fa-envelope-open position-absolute"></i>
-                <span class="d-block">INSTAGRAM</span>@krazzyy.naman
-            </p>
-            <p class="open-sans-font custom-span-contact position-relative">
-                <i class="fa fa-envelope-open position-absolute"></i>
-                <span class="d-block">Github</span>namanjain2136
-            </p>
-        </div>
+                <p class="open-sans-font custom-span-contact position-relative">
+                    <i class="fa fa-instagram position-absolute"></i>
+                    <span class="d-block">INSTAGRAM</span>@krazzyy.naman
+                </p>
+                <p class="open-sans-font custom-span-contact position-relative">
+                    <i class="fa fa-github position-absolute"></i>
+                    <span class="d-block">Github</span>namanjain2136
+                </p>
+            </div>
             <!-- Left Side Ends -->
+
             <!-- Contact Form Starts -->
             <div class="col-12 col-lg-8">
-                <form class="contactform" method="post" action="php/process-form.php">
+                <form class="contactform" method="post" action="">
                     <div class="contactform">
                         <div class="row">
                             <div class="col-12 col-md-4">
-                                <input type="text" name="name" placeholder="YOUR NAME">
+                                <input type="text" name="name" placeholder="YOUR NAME" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="email" name="email" placeholder="YOUR EMAIL">
+                                <input type="email" name="email" placeholder="YOUR EMAIL" required>
                             </div>
                             <div class="col-12 col-md-4">
-                                <input type="text" name="subject" placeholder="YOUR SUBJECT">
+                                <input type="text" name="subject" placeholder="YOUR SUBJECT" required>
                             </div>
                             <div class="col-12">
-                                <textarea name="message" placeholder="YOUR MESSAGE"></textarea>
+                                <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
                                 <button type="submit" class="button">
                                     <span class="button-text">Send Message</span>
                                     <span class="button-icon fa fa-send"></span>
                                 </button>
                             </div>
                             <div class="col-12 form-message">
-                                <span class="output_message text-center font-weight-600 text-uppercase"></span>
+                                <span class="output_message text-center font-weight-600 text-uppercase">
+                                    <?php
+                                    if (isset($success_message)) {
+                                        echo $success_message;
+                                    } elseif (isset($error_message)) {
+                                        echo $error_message;
+                                    }
+                                    ?>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -164,8 +190,8 @@
             <!-- Contact Form Ends -->
         </div>
     </div>
-
 </section>
+
 <!-- Template JS Files -->
 <script src="js/jquery-3.5.0.min.js"></script>
 <script src="js/styleswitcher.js"></script>
@@ -181,5 +207,4 @@
 <script src="js/custom.js"></script>
 
 </body>
-
 </html>

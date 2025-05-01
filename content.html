@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-=======
-﻿<!DOCTYPE html>
->>>>>>> 59e5bf5 (minor changes)
     <html lang="en">
     
     <head>
@@ -17,13 +13,28 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
-    
+        <link href="css/preloader.min.css" rel="stylesheet">
+        <link href="css/circle.css" rel="stylesheet">
+         <!-- Live Style Switcher - demo only -->
+    <link rel="alternate stylesheet" type="text/css" title="blue" href="css/skins/blue.css">
+    <link rel="alternate stylesheet" type="text/css" title="green" href="css/skins/green.css">
+    <link rel="alternate stylesheet" type="text/css" title="yellow" href="css/skins/yellow.css">
+    <link rel="alternate stylesheet" type="text/css" title="blueviolet" href="css/skins/blueviolet.css">
+    <link rel="alternate stylesheet" type="text/css" title="goldenrod" href="css/skins/goldenrod.css">
+    <link rel="alternate stylesheet" type="text/css" title="magenta" href="css/skins/magenta.css">
+    <link rel="alternate stylesheet" type="text/css" title="orange" href="css/skins/orange.css">
+    <link rel="alternate stylesheet" type="text/css" title="purple" href="css/skins/purple.css">
+    <link rel="alternate stylesheet" type="text/css" title="red" href="css/skins/red.css">
+    <link rel="alternate stylesheet" type="text/css" title="yellowgreen" href="css/skins/yellowgreen.css">
+    <link rel="stylesheet" type="text/css" href="css/styleswitcher.css">
+
+
         <style>
             /* Custom styles for the content page */
             .main-content {
                 padding: 2rem 0;
             }
-    
+            
             .insight-image {
                 transition: transform 0.3s, box-shadow 0.3s;
                 border-radius: 10px;
@@ -46,7 +57,7 @@
                 margin: 5px;
                 padding: 10px;
                 float: left;
-                width: calc(50% - 10px); /* 2 images per row with margin */
+                width: calc(25% - 10px); /* 2 images per row with margin */
                 position: relative;
             }
     
@@ -80,7 +91,22 @@
             .paid-promotion {
                 text-align: center;
                 margin-top: 2rem;
-            }
+            }@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s cubic-bezier(.4,2,.6,1);
+  animation-fill-mode: both;
+}
+
         </style>
     
         <!-- Modernizr JS File -->
@@ -88,7 +114,10 @@
     </head>
     
     <body class="content">
-    
+        <section class="main-content fade-in-up">
+            <!-- ...your content here... -->
+          
+            
     <!-- Header Starts -->
     <header class="header" id="navbar-collapse-toggle">
         <!-- Fixed Navigation Starts -->
@@ -148,7 +177,7 @@
     <!-- Page Title Starts -->
     <section class="title-section text-left text-sm-center">
         <h1><span>Content</span></h1>
-        <span class="title-bg">Insights</span>
+        <span class="title-bg">Instagram</span>
     </section>
     <!-- Page Title Ends -->
     
@@ -215,13 +244,13 @@
                     <a target="_blank" href="https://www.instagram.com/reel/C_bA2KQhEwu/?igsh=bWM5ZWQxMnVlcGJy">
                         <img src="img/brand1.jpg" alt="Brand 1">
                     </a>
-                    <div class="desc">FLAMES</div>
+                    <div class="desc">TECHSKININDIA</div>
                 </div>
                 <div class="gallery">
                     <a target="_blank" href="https://www.instagram.com/reel/C_pNOAKJsBw/?igsh=N2VicHg3Yjd1c2dn">
                         <img src="img/brand2.jpg" alt="Brand 2">
                     </a>
-                    <div class ="desc">TECHSKININDIA</div>
+                    <div class ="desc">FLAMES</div>
                 </div>
                 <div class="gallery">
                     <a target="_blank" href="https://www.instagram.com/reel/C_kC3VKh4q3/?igsh=N2h4ZTdqNGxsbDNm">
@@ -238,9 +267,14 @@
             </div>
             <!-- Paid Collaborations Section Ends -->
         </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+            <a href="https://www.instagram.com/krazzyy.naman/" target="_blank" class="btn btn-warning" style="padding: 0.8rem 2rem; border-radius: 30px; font-weight:600; font-size:1.1rem;">
+                <i class="fa fa-instagram"></i> Follow @krazzyy.naman
+            </a>
+        </div>
     </section>
     <!-- Main Content Ends -->
-    
+</section>
     <!-- Template JS Files -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
